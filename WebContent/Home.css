@@ -1,0 +1,101 @@
+@CHARSET "ISO-8859-1";
+div#topo{
+	position: relative;
+	left:22%;
+	background: #9C27B0;
+	width: 700px;
+	height: 90px;
+}
+
+div#topo img{
+	width: 30%;
+	margin-left: 15px;
+	margin-top: 10px;
+}
+
+div#menu ul{
+	margin-left: 22%;
+	background: #9C27B0;
+	width: 660px;
+	height: 50px;
+	margin-top: 0px;	
+}
+
+div#menu ul li{
+	display: inline;
+
+}
+
+div#menu ul li a{
+	color: #FFF;
+	font: 18px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	padding: 14px 50px;
+	float: left;
+	right: 10%;
+}
+
+div#menu ul li a:hover{
+	background: #7B1FA2;
+	border-bottom: 5px #fff solid;
+}
+
+div#sala{
+	margin-left: 22%;
+	width: 698px;
+	height: 700px;
+	margin-top: -16px;
+	border: 1px solid;
+}
+
+div#sala form{
+	margin-top: 5px;
+	margin-left: 10px;
+	width: 325px;
+	padding: 2em 2em 3em 2em;
+	background: #FFF ;
+	margin-top: 0px;
+}
+
+hgroup { 
+	text-align:;
+	margin-top:0px;
+}
+
+input {
+	font-size: 18px;
+	padding: 5px 5px 5px 5px;
+	width: 100%;
+}
+
+h1#texto{	
+	margin-left: 50px;
+	margin-top: 40px;
+	color: #000;
+	font: 30px "Trebuchet MS", Arial, Helvetica, sans-serif;
+
+}
+input#tempo{
+	margin-top: 15px;
+	width: 90px;
+}
+#criar_sala a button{  
+  width: 200px;
+  height: 30px;
+  color:#FFF  ;
+  background: #7B1FA2;
+  border: 0;
+  text-decoration: none;
+  margin-top: 30px;
+  margin-left: 90px;
+}
+
+div#busca{
+	margin-top: 20px;
+}
+h1#text{
+	margin-top: 40px;
+	color: #000;
+	font: 30px "Trebuchet MS", Arial, Helvetica, sans-serif;
+
+}

@@ -1,0 +1,45 @@
+@CHARSET "ISO-8859-1";
+div#topo{
+	position: relative;
+	left:22%;
+	background: #9C27B0;
+	width: 700px;
+	height: 90px;
+}
+
+div#topo img{
+	width: 30%;
+	margin-left: 15px;
+	margin-top: 10px;
+}
+
+div#menu ul{
+	margin-left: 22%;
+	background: #9C27B0;
+	width: 660px;
+	height: 50px;
+	margin-top: 0px;	
+}
+
+div#menu ul li{
+	display: inline;
+
+}
+
+div#menu ul li a{
+	color: #FFF;
+	font: 18px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	padding: 14px 50px;
+	float: left;
+	right: 10%;
+}
+
+div#menu ul li a:hover{
+	background: #7B1FA2;
+	border-bottom: 5px #fff solid;
+}
+
+	
+
+
