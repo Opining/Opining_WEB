@@ -1,76 +1,40 @@
-<!DOCTYPE html>
-<html ng-app="opining">
-
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Login</title>
-	<link rel="stylesheet" href="style/login.css">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-	<!-- AngularJS imports -->
-	<script type="text/javascript" src="lib/angular/angular.min.js"></script>
-	<script type="text/javascript" src="js/app.js"></script>
-	<script type="text/javascript" src="js/controllers/loginCtrl.js"></script>
-	<script type="text/javascript" src="js/controllers/registerCtrl.js"></script>
-	<script type="text/javascript" src="js/services/userService.js"></script>
-	<script type="text/javascript" src="js/config/valueConfig.js"></script>
-
-</head>
-
-<body>
-	<div id="principal">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+   
+<html>
+	<head>
 		
-		<div id="topo"> 
-			<div class="imagem">
-				<img src="style/img/logo.png" alt="logo" />
-			</div>
-		</div>		
+		<title> Opining</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<link rel="shortcut icon" href="resources/images/logo.png">
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
 		
-		<div id="formulario">
-			<div ng-controller="loginCtrl">
-				<form>
-					<div class="group">
-						<label>Email</label>
-						<input type="text" ng-model="user.login">
-					</div> 
-
-					<div class="group">
-						<label>Senha</label> 
-						<input type="password" ng-model="user.password">
-					</div>
-
-				</form>
-
-				<div id="button_enviar">	
-					<button type="submit" ng-click="doLogin(user)"> Enviar</button>
-				</div>
-			</div>
-
-			<div ng-controller="registerCtrl">
-				<form>
-
-					<div class="group">
-						<label>Nome</label>
-						<input type="text" ng-model="user.name">				   
-					</div>
-
-					<div class="group">
-						<label>Email</label>
-						<input type="text" ng-model="user.login">			   	 
-					</div> 
-
-					<div class="group">
-						<label>Senha</label> 
-						<input type="password" ng-model="user.password">
-					</div>			
-				</form>
-				<div id="button_cadastro">
-					<button type="submit" ng-click="doRegister(user)">Cadastrar
-					</button>
-				</div> 
-			</div>
-		</div>					   
-	</div>
-</body>
+	</head>
+	
+	<body>
+        <div id="wrapper">	
+            <div id="login">			
+                <form  action="LoginServlet.do" method="Post" target="_self" autocomplete="on"> 
+                       <img alt="Logo do Confinanças" src="resources/images/logo.png">
+						<img alt="Nome do Projeto" src="resources/images/Confinancas.png">
+						<p> 
+							<input name="username" required="required" type="text" placeholder="Username or Email" />
+						</p>
+                    
+						<p> 
+							<input name="password" required="required" type="password" placeholder="Password"/>
+						</p>
+							
+						<p class="login button"> 
+							<input type="submit" value="Login"/> 
+						</p>
+						<p class="change_link">
+							Ainda não é membro? 
+							<a href="cadastro.jsp">Junte-se a nós!</a>
+						</p>
+                </form>
+            </div>
+        </div>  	
+	</body>
+	
 </html>
