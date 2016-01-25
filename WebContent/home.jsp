@@ -18,9 +18,14 @@
 	<title>Opining</title>
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="css/form-elements.css">
-	<link rel="stylesheet" href="css/style.home.css">
-	<link rel="stylesheet" href="css/style.home.tabela.css" media="screen" />
+	<link rel="stylesheet" href="css/home.form-elements.css">
+	<link rel="stylesheet" href="css/home.css">
+	<link rel="stylesheet" href="css/home.tabela.css" media="screen" />
+	
+	<!-- JS -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+	<script src="js/js.table/jquery.tablesorter.min.js"></script>
+	<script src="js/js.table/jquery.tablesorter.pager.js"></script>
 
 </head>
 
@@ -57,35 +62,12 @@
 				<table>
 					<thead>
 						<tr>
-							<th>Título</th>
-							<th>Autor</th>
-							<th>Editora</th>
-							<th>Ano de lançamento</th>
-							<th>Tipo</th>
-							<th>Número de páginas</th>
-							<th>Descrição</th>
-							<th>Ação</th>
+							<th>ID</th>
+							<th>Tema</th>
+							<th>Quantidade de pessoas</th>
+							<th>Quantidade máxima</th>
 						</tr>
 					</thead>
-					<%
-						List<Livro> livros = (List<Livro>) session.getAttribute("livros");
-						for (Livro livro : livros) {
-					%>
-					<tbody>
-						<tr>
-							<td><%=livro.getTitulo()%></td>
-							<td><%=livro.getAutores()%></td>
-							<td><%=livro.getEditora()%></td>
-							<td><%=livro.getAno()%></td>
-							<td><%=livro.getTipo()%></td>
-							<td><%=livro.getNum_pag()%></td>
-							<td><%=livro.getDescricao()%></td>
-							<td><img src="style/img/img.table/delete.png"></td>
-						</tr>
-					</tbody>
-					<%
-						}
-					%>
 				</table>
 
 				<div id="pager" class="pager">
