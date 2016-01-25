@@ -1,0 +1,96 @@
+*, html{
+	font-family: Helvetica, Arial,sans-serif;
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+}
+
+body{
+	margin: 10px;
+}
+
+h1{
+	font-size:20px;
+	font-family: Georgia, "Times New Roman", serif;
+	letter-spacing:-2px;
+}
+
+a img{
+	border:none;
+	width:16px;
+}
+
+form{
+  background-color:#f2f2f2;
+  width:800px;
+  margin:10px 0 10px 0;
+  text-align:center;
+}
+
+form p{
+  padding:12px;
+}
+
+form p label{
+  color:#333;
+  font-weight:900;
+}
+
+form input{
+  padding:6px;
+  border:1px solid #ccc;
+  width:300px;
+}
+
+table{
+  width:800px;
+  border:1px solid #ccc;
+}
+
+table thead th{
+  background-color:#008B8B;
+  padding:6px;
+  color:#fff;
+  text-align:center;
+  font-size:14px;
+}
+
+table thead th.header{
+  cursor:pointer;
+}
+
+table tbody td{
+  padding:6px;
+  text-align:center;
+  color:#333;
+}
+
+table tbody tr.odd td{
+  background-color:#FAEBD7;
+}
+
+table tbody tr.selected td{
+  background-color:#E9967A!important;
+}
+
+.pagedisplay{
+	width:40px;
+	text-align:center;
+	border:none;
+	background-color:#f2f2f2;
+	font-weight:900;
+}
+
+#pager span{
+	font-weight:900;
+	display:inline-block;
+	margin:0 0 0 20px;
+	color:#666;
+	float:right;
+}
+
+#pager form{
+	text-align:left;
+	padding:10px;
+	width:780px;
+}
