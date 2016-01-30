@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html ng-app="opining">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="shortcut icon" href="style/img/icon.png">
+	<link rel="stylesheet" type="text/css" href="css/cadastro.css">
+	<title>Opining</title>
+
+	<!-- AngularJS imports -->
+	<script type="text/javascript" src="lib/angular/angular.min.js"></script>
+	<script src="lib/angular/angular-cookies.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/controllers/registerCtrl.js"></script>
+	<script type="text/javascript" src="js/services/userService.js"></script>
+	<script type="text/javascript" src="js/config/valueConfig.js"></script>
+
+</head>
+
+<body ng-controller="registerCtrl">
+	<div id="wrapper">
+		<div id="register">
+			<img alt="Inscreva-se" src="style/img/Inscrever.png">
+			<form ng-submit="doRegister(user)" method="post" autocomplete="on" name="registerForm">
+				<fieldset>
+					<table cellspacing="15">
+						<tr>
+							<td>
+								<label> Login de usuário: </label> 
+								<input type="text" name="username" required="required"
+								ng-model="user.login" ng-maxlength="15" ng-minlength="4">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label> Nome completo: </label> 
+								<input type="text" name="name" required="required"
+								ng-model="user.name" ng-maxlength="255" ng-minlength="3">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label> Senha: </label> 
+								<input type="password" name="password" required="required"
+								ng-model="user.password" ng-maxlength="15" ng-minlength="6">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label> Confirme a senha: </label> 
+								<input type="password" name="password_confirm" required="required"
+								ng-model="confirm_password" ng-maxlength="15" ng-minlength="6">
+							</td>
+						</tr>
+					</table>
+				</fieldset>
+
+
+				<p class="register button">
+					<input type="submit" value="Register" ng-disabled="registerForm.$invalid" 
+					ng-class="{'invalid':registerForm.$invalid}"/>
+				</p>
+
+				<p class="change_link">
+					Já é um membro?<a href="index.html"> Faça o login! </a>
+				</p>
+
+			</form>
+		</body>
+		</html>

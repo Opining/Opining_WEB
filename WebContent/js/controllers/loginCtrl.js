@@ -1,4 +1,4 @@
-angular.module("opining").controller("loginCtrl", function($scope, userService, config){
+angular.module("opining").controller("loginCtrl", function($scope, userService, config, $cookies){
 
 	$scope.doLogin = function (user) {
 
@@ -6,7 +6,8 @@ angular.module("opining").controller("loginCtrl", function($scope, userService, 
 
 		userService.doLogin(_user).success(function (data, status) {
 
-			alert("Logado!");
+			$cookies.putObject("user", data);
+			window.location = "home.html";
 
 		}).error(function(data, status) {
 				
@@ -15,4 +16,5 @@ angular.module("opining").controller("loginCtrl", function($scope, userService, 
 			
 		});
 	};
+
 });

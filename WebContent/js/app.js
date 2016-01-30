@@ -1,1 +1,1 @@
-angular.module("opining", []);
+angular.module("opining", ["ngCookies"]);

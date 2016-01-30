@@ -1,39 +1,46 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-   "http://www.w3.org/TR/html4/loose.dtd">
-   
-<html>
-	<head>
-		
-		<title> Opining</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-		<link rel="shortcut icon" href="style/img/icon.png">
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-		
-	</head>
-	
-	<body>
-        <div id="wrapper">	
-            <div id="login">			
-                <form  action="LoginServlet.do" method="Post" target="_self" autocomplete="on"> 
-                       <img alt="Logo do Confinanças" src="style/img/logo.png">
-						<p> 
-							<input class="user" name="username" required="required" type="text" placeholder="Username or Email" />
-						</p>
-                    
-						<p> 
-							<input class="password" name="password" required="required" type="password" placeholder="Password"/>
-						</p>
-							
-						<p class="login button"> 
-							<input type="submit" value="Login"/> 
-						</p>
-						<p class="change_link">
-							Ainda não é membro? 
-							<a href="cadastro.jsp">Junte-se a nós!</a>
-						</p>
-                </form>
-            </div>
-        </div>  	
-	</body>
-	
+<!DOCTYPE HTML>
+
+<html ng-app="opining">
+<head>
+
+	<title> Opining</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<link rel="shortcut icon" href="style/img/icon.png">
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+
+	<!-- AngularJS imports -->
+	<script type="text/javascript" src="lib/angular/angular.min.js"></script>
+	<script src="lib/angular/angular-cookies.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/controllers/loginCtrl.js"></script>
+	<script type="text/javascript" src="js/services/userService.js"></script>
+	<script type="text/javascript" src="js/config/valueConfig.js"></script>
+
+</head>
+
+<body ng-controller="loginCtrl">
+	<div id="wrapper">	
+		<div id="login">			
+		<form  ng-submit="doLogin(user)" method="post" autocomplete="on"> 
+				<img alt="Logo do Confinanças" src="style/img/logo.png">
+				<p> 
+					<input ng-model="user.login" class="user" name="username" required="required" type="text" placeholder="Username or Email" />
+				</p>
+
+				<p> 
+					<input ng-model="user.password" class="password" name="password" required="required" type="password" placeholder="Password"/>
+				</p>
+
+				<p class="login button"> 
+					<input type="submit" value="Login"/> 
+				</p>
+				<p class="change_link">
+					Ainda não é membro? 
+					<a href="cadastro.html">Junte-se a nós!</a>
+				</p>
+			</form>
+		</div>
+	</div>  	
+</body>
+
 </html>

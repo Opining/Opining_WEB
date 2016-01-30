@@ -1,10 +1,7 @@
-angular.module("opining").factory("userService", function($http, config){
+angular.module("opining").factory("polarizedRoomService", function($http, config){
 
-	var _listRooms = function(debate){
-
-		debate.password = window.btoa(debate.password);
-
-		return $http.get(config.baseUrl() + "/debate/polarized/listDebates")
+	var _listRooms = function(){
+		return $http.post(config.baseUrl() + "/debate/polarized/listDebates")
 	}
 
 	return {

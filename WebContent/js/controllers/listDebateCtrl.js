@@ -1,6 +1,7 @@
-angular.module("opining").controller("listDebateCtrl", function($scope, polarizedRoomService, config){
+angular.module("opining").controller("listDebateCtrl", function($scope, polarizedRoomService, config, $cookies){
 
 	$scope.polarized_debates = [];
+	$scope.user = $cookies.getObject("user").user;
 
 	var loadDebates = function () {
 
@@ -13,6 +14,11 @@ angular.module("opining").controller("listDebateCtrl", function($scope, polarize
 			alert("Ocorreu um erro no servidor. Tente novamente mais tarde.");
 			
 		});
+	};
+
+	$scope.doLogout = function () {
+		$cookies.remove("user");
+		window.location = "index.html";
 	};
 
 	loadDebates();

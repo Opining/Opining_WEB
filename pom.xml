@@ -3,8 +3,8 @@
 		 					http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>ForCode_WEB</groupId>
-	<artifactId>ForCode_WEB</artifactId>
+	<groupId>Opining_WEB</groupId>
+	<artifactId>Opining_WEB</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
