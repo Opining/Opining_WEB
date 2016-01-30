@@ -5,46 +5,64 @@
 	<link rel="shortcut icon" href="style/img/icon.png">
 	<link rel="stylesheet" type="text/css" href="css/atualizar.css">
 	<title>Opining</title>
+
+	<!-- AngularJS imports -->
+	<script type="text/javascript" src="lib/angular/angular.min.js"></script>
+	<script src="lib/angular/angular-cookies.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/controllers/updateUserCtrl.js"></script>
+	<script type="text/javascript" src="js/services/userService.js"></script>
+	<script type="text/javascript" src="js/config/valueConfig.js"></script>
+
 </head>
 
-<body>
+<body ng-controller="updateUserCtrl">
 	<div id="wrapper">
 		<div id="register">
 			<img alt="Atualizar dados" src="style/img/Atualizar.png">
-			<form action="CadastroServlet.do" method="Post" target="_self"
-			autocomplete="on">
-			<fieldset>
-				<table cellspacing="15">
-					<tr>
-						<td><label> Nome de usuário: </label> <input type="text"
-							name="username" required="required"></td>
-						</tr>
+			<form ng-submit="doUpdate()" method="post" autocomplete="on">
+				<fieldset>
+					<table cellspacing="15">
 						<tr>
-							<td><label> Email: </label> <input
-								type="text" name="email" required="required">
+							<td>
+								<label>Login de usuário: </label> 
+								<input type="text" name="username" required="required"
+								ng-model="user.login" ng-maxlength="15" ng-minlength="4">
 							</td>
 						</tr>
 						<tr>
-							<td><label> Senha: </label> <input type="password"
-								name="password" required="required"></td>
-							</tr>
-							<tr>
-								<td><label> Confirme a senha: </label> <input
-									type="password" name="password_confirm" required="required">
-								</td>
-							</tr>
-						</table>
-					</fieldset>
+							<td>
+								<label> Nome completo: </label> 
+								<input type="text" name="name" required="required"
+								ng-model="user.name" ng-maxlength="255" ng-minlength="3">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label> Senha: </label> 
+								<input type="password" name="password" required="required"
+								ng-model="user.password" ng-maxlength="15" ng-minlength="6">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label> Confirme a senha: </label> 
+								<input type="password" name="password_confirm" required="required"
+								ng-model="confirm_password" ng-maxlength="15" ng-minlength="6">
+							</td>
+						</tr>
+					</table>
+				</fieldset>
 
 
-					<p class="register button">
-						<input type="submit" value="Atualizar" />
-					</p>
+				<p class="register button">
+					<input type="submit" value="Atualizar" />
+				</p>
 
-					<p class="change_link">
-						Dados atualizados? <a href="index.html"> Faça o login! </a>
-					</p>
+				<p class="change_link">
+					<a href="home.html">Voltar a página inicial</a>
+				</p>
 
-				</form>
-			</body>
-			</html>
+			</form>
+		</body>
+		</html>
