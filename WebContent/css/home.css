@@ -191,7 +191,6 @@
 	
 	.title h2
 	{
-		text-transform: lowercase;
 		font-size: 2.8em;
 	}
 	
@@ -307,7 +306,7 @@
 		overflow: hidden;
 		float: right;
 		width: 800px;
-		padding: 3em 50px 5em 50px;
+		padding: 3em 50px 18.8em 50px;
 		background: #FFF;
 		border-top: 8px solid #EE7600;
 		text-align: center;
