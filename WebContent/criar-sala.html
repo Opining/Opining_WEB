@@ -8,8 +8,7 @@
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/form-elements.css">
-	<link rel="stylesheet" href="css/home.css">
-	<link rel="stylesheet" href="css/home.tabela.css" media="screen" />
+	<link rel="stylesheet" href="css/criar-sala.css">
 	
 	<!-- JS -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
@@ -46,44 +45,41 @@
 			<div id="banner"></div>
 			<div id="welcome">
 				<div class="title">
-					<h2>Olá {{user.name}}</h2>
+					<h2>Criar sala</h2>
 				</div>
 			</div>
 			
-			<div id="featured">
-				<table>
-					<thead>
-						<tr>
-							<th>ID</th>
-							<th>Tema</th>
-							<th>Quantidade de pessoas</th>
-							<th>Quantidade máxima</th>
-						</tr>
-					</thead>
-					<tr ng-repeat="debate in polarized_debates">
-						<th>{{debate.idRoom}}</th>
-						<th>{{debate.subject}}</th>
-						<th>0</th>
-						<th>{{debate.numMaxParticipants}}</th>
-					</tr>
-				</table>
+			<div id="featured">			
+				<form method="post" autocomplete="on"> 
+					<p> 
+						<input class="campo"  name="tema" required="required" type="text" placeholder="Tema" />
+					</p>
 
-				<div id="pager" class="pager">
-					<form>
-						<span> Exibir 
-							<select class="pagesize">
-								<option selected="selected" value="10">10</option>
-								<option value="20">20</option>
-								<option value="30">30</option>
-								<option value="40">40</option>
-							</select> registros
-						</span> 
-						<img src="style/img/img.table/first.png" class="first" /> 
-						<img src="style/img/img.table/prev.png" class="prev" /> 
-						<img src="style/img/img.table/next.png" class="next" /> 
-						<img src="style/img/img.table/last.png" class="last" />
-					</form>
-				</div>
+					<p> 
+						<input class="campo" name="password" type="password" placeholder="Senha"/>
+					</p>
+					
+					<p> 
+						<label> Quantidade de pessoas: 
+							<select>
+								<option value="1"> 01 </option>
+								<option value="2"> 02 </option>
+								<option value="3"> 03 </option>
+								<option value="4"> 04 </option>
+								<option value="5"> 05 </option>
+								<option value="6"> 06 </option>
+								<option value="7"> 07 </option>
+								<option value="8"> 08 </option>
+								<option value="9"> 09 </option>
+								<option value="10"> 10 </option>
+							</select>
+						</label>
+					</p>
+
+					<p> 
+						<input class="button" type="submit" value="Criar sala"/> 
+					</p>
+				</form>
 			</div>
 		</div>
 	</div>

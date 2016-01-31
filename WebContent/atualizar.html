@@ -21,46 +21,24 @@
 		<div id="register">
 			<img alt="Atualizar dados" src="style/img/Atualizar.png">
 			<form ng-submit="doUpdate()" method="post" autocomplete="on">
-				<fieldset>
-					<table cellspacing="15">
-						<tr>
-							<td>
-								<label>Login de usuário: </label> 
-								<input type="text" name="username" required="required"
-								ng-model="user.login" ng-maxlength="15" ng-minlength="4">
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<label> Nome completo: </label> 
-								<input type="text" name="name" required="required"
-								ng-model="user.name" ng-maxlength="255" ng-minlength="3">
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<label> Senha: </label> 
-								<input type="password" name="password" required="required"
-								ng-model="user.password" ng-maxlength="15" ng-minlength="6">
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<label> Confirme a senha: </label> 
-								<input type="password" name="password_confirm" required="required"
-								ng-model="confirm_password" ng-maxlength="15" ng-minlength="6">
-							</td>
-						</tr>
-					</table>
-				</fieldset>
-
-
+				<input type="text" name="username" required="required" placeholder="Login de usuário"
+				ng-model="user.login" ng-maxlength="15" ng-minlength="4">
+							
+				<input type="text" name="name" required="required" placeholder="Nome completo"
+				ng-model="user.name" ng-maxlength="255" ng-minlength="3">
+							
+				<input type="password" name="password" required="required" placeholder="Senha"
+				ng-model="user.password" ng-maxlength="15" ng-minlength="6">
+							 
+				<input type="password" name="password_confirm" required="required" placeholder="Confirmar a senha"
+				ng-model="confirm_password" ng-maxlength="15" ng-minlength="6">
+				
 				<p class="register button">
 					<input type="submit" value="Atualizar" />
 				</p>
 
 				<p class="change_link">
-					<a href="home.html">Voltar a página inicial</a>
+					Dados atualizados?<a href="home.html">Voltar a página inicial</a>
 				</p>
 
 			</form>
