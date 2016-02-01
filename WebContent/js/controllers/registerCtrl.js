@@ -2,7 +2,7 @@ angular.module("opining").controller("registerCtrl", function($scope, config, us
 	
 	$scope.doRegister = function(user){
 
-		if ($scope.user.password != $scope.confirm_password){
+		if (user.password != $scope.confirm_password){
 			alert("As senhas não coincidem");
 			return;
 		}

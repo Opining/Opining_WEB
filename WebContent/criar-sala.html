@@ -19,15 +19,16 @@
 	<script type="text/javascript" src="lib/angular/angular.min.js"></script>
 	<script src="lib/angular/angular-cookies.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/controllers/createRoomCtrl.js"></script>
 	<script type="text/javascript" src="js/controllers/listDebateCtrl.js"></script>
 	<script type="text/javascript" src="js/services/polarizedRoomService.js"></script>
 	<script type="text/javascript" src="js/config/valueConfig.js"></script>
 
 </head>
 
-<body ng-controller="listDebateCtrl">
+<body>
 	<div id="page" class="container">
-		<div id="header">
+		<div id="header" ng-controller="listDebateCtrl">
 			<div id="logo">
 				<img src="style/img/default.jpg" alt="Imagem do perfil" />
 				<h1>{{user.name}}</h1>
@@ -49,29 +50,27 @@
 				</div>
 			</div>
 			
-			<div id="featured">			
-				<form method="post" autocomplete="on"> 
+			<div id="featured" ng-controller="createRoomCtrl">			
+				<form ng-submit="doCreateRoom(room)" method="post" autocomplete="on"> 
 					<p> 
-						<input class="campo"  name="tema" required="required" type="text" placeholder="Tema" />
+						<input class="campo"  name="tema" required="required" type="text" placeholder="Tema" 
+						 ng-model="room.subject"/>
 					</p>
 
 					<p> 
-						<input class="campo" name="password" type="password" placeholder="Senha"/>
+						<input class="campo" name="password" type="password" placeholder="Senha (Não obrigatório)"
+						 ng-model="room.password"/>
+					</p>
+					
+					<p> 
+						<input class="campo" name="password" type="password" placeholder="Repita a senha"
+						 ng-model="confirm_password"/>
 					</p>
 					
 					<p> 
 						<label> Quantidade de pessoas: 
-							<select>
-								<option value="1"> 01 </option>
-								<option value="2"> 02 </option>
-								<option value="3"> 03 </option>
-								<option value="4"> 04 </option>
-								<option value="5"> 05 </option>
-								<option value="6"> 06 </option>
-								<option value="7"> 07 </option>
-								<option value="8"> 08 </option>
-								<option value="9"> 09 </option>
-								<option value="10"> 10 </option>
+							<select ng-model="selectedItem" 
+							ng-options="maxParticipantsValues.indexOf(selectedItem) as selectedItem for selectedItem in maxParticipantsValues">
 							</select>
 						</label>
 					</p>
